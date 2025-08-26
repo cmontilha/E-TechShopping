@@ -5,18 +5,6 @@ The goal of this project is to simulate a basic e-commerce flow, allowing users 
 
 ---
 
-## Features
-
-- Landing Page with a "Get Started" button.
-- Product listing organized by category.
-- Add items to the shopping cart.
-- Increment, decrement, and remove items from the cart.
-- Automatic subtotal and total calculation.
-- Side drawer to view the cart at any time.
-- Options to continue shopping, checkout, or clear the cart.
-
----
-
 ## Showcase
 
 ### Landing Page
@@ -34,6 +22,18 @@ The goal of this project is to simulate a basic e-commerce flow, allowing users 
 - **React Router DOM** for navigation.
 - **Vite** as bundler and dev environment.
 - **Pure CSS** for styling.
+
+---
+
+## Features
+
+- Landing Page with a "Get Started" button.
+- Product listing organized by category.
+- Add items to the shopping cart.
+- Increment, decrement, and remove items from the cart.
+- Automatic subtotal and total calculation.
+- Side drawer to view the cart at any time.
+- Options to continue shopping, checkout, or clear the cart.
 
 ---
 
