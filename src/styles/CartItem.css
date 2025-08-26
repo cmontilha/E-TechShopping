@@ -1,0 +1,193 @@
+/* Remove the negative margin that caused overlap */
+.continue_shopping_btn{
+  margin-top: 0; /* was -50px */
+}
+
+/* --- Cart summary footer --- */
+.cart-summary{
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.cart-total{
+  font-size: 20px;
+  font-weight: 900;
+  text-align: right;
+  margin-bottom: 12px;
+}
+
+.cart-actions{
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Unified small/medium button style */
+.btn{
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.btn:hover{ background: #f6f6f6; }
+
+.btn-primary{
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: #fff;
+}
+.btn-primary:hover{ background: #45a049; }
+
+.btn-danger{
+  background: #c62828;
+  border-color: #c62828;
+  color: #fff;
+}
+.btn-danger:hover{ background: #ad2121; }
+
+/* Ensure the drawer scrolls and footer stays readable */
+.cart-drawer{ overflow-y: auto; }
+
+
+/* Container geral da página do carrinho */
+.cart-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.total_cart_amount{
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.continue_shopping_btn{
+  margin-top: -50px;
+}
+
+/* ---------------- CartItem (linha) ---------------- */
+.cart-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  background-color: #fff;
+  width: 100%;            /* antes: 500px; agora ocupa o container do drawer */
+  max-width: 100%;
+  gap: 16px;              /* gap um pouco menor pra caber melhor */
+}
+
+/* Thumb contida dentro do drawer */
+.cart-item-image {
+  width: 120px;           /* tamanho fixo pra manter consistência */
+  height: 90px;
+  object-fit: contain;    /* preserva proporção sem recortar */
+  margin-right: 0;        /* usamos o gap do flex */
+  display: block;
+}
+
+/* Se quiser garantir ainda mais quando estiver no drawer */
+.cart-drawer .cart-item-image {
+  width: 120px;
+  height: 90px;
+}
+
+/* Área de texto flexível */
+.cart-item-details {
+  flex: 1 1 auto;         /* permite encolher/expandir */
+  min-width: 0;           /* evita overflow de textos longos */
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+
+.cart-item-cost {
+  margin: 10px 0;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.cart-item-button {
+  background-color: #f0f0f0;
+  border: 1px solid lightgrey;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.cart-item-quantity-value {
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-weight: bold;
+}
+
+.cart-item-delete {
+  background-color: #ff6961;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.cart-item-delete:hover {
+  background-color: #cc0000;
+}
+
+/* ---------------- Responsivo ---------------- */
+@media (max-width: 520px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+  }
+
+  .cart-item-details {
+    width: 100%;
+  }
+
+  .cart-item-quantity {
+    margin-top: 10px;
+  }
+}
+
+/* Botões gerais extras */
+.danger {
+  background: #c62828;
+  color: #fff;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
